@@ -139,11 +139,25 @@ export const benefits = [
   { number: "03", title: "Keep your SIM", body: "Use your existing number for calls while roamly handles your travel data." },
 ];
 
+export const faqCategories = ["All questions", "Get ready", "Manage your eSIM", "Account & payment", "Troubleshooting"] as const;
+
 export const faqs = [
-  { question: "When should I install my eSIM?", answer: "Install before your trip while you have Wi-Fi. Your plan starts when it connects to a supported network at your destination." },
-  { question: "Can I use hotspot or tethering?", answer: "Yes. Every mock plan marked “Hotspot supported” is designed for tethering. Availability can vary by local network." },
-  { question: "Do I need to remove my physical SIM?", answer: "No. Keep your main SIM for calls and set roamly as the mobile data line when you travel." },
-  { question: "What happens after I submit a request?", answer: "The demo form creates a mock request only. In production, this step will connect to Turso and your chosen fulfilment provider." },
+  { category: "Get ready", question: "How do I get a roamly eSIM?", answer: "Choose a plan for your destination, submit the mock request and follow the QR installation instructions. In production, the eSIM profile would be delivered after payment." },
+  { category: "Get ready", question: "Who should use an eSIM while travelling?", answer: "An eSIM is useful when you want local data without swapping your physical SIM, especially for international trips, multi-country itineraries and short stays." },
+  { category: "Get ready", question: "How do I check if my phone supports eSIM?", answer: "Look for an Add eSIM or Add Mobile Plan option in your phone's cellular settings. Your device must also be carrier-unlocked. Check the manufacturer's model list before purchase." },
+  { category: "Get ready", question: "Can I use an eSIM on my laptop or tablet?", answer: "Some cellular laptops and tablets support eSIM. Check the device specifications and make sure the cellular modem is unlocked before selecting a plan." },
+  { category: "Get ready", question: "How do I choose the right data plan?", answer: "Match the coverage to your itinerary first, then choose data based on trip length and usage. Maps, messaging and ride apps need less data than video calls or streaming." },
+  { category: "Get ready", question: "When should I install my eSIM?", answer: "Install it before your trip while you have reliable Wi‑Fi. Keep your travel eSIM turned off until arrival if you want the plan to start only when you reach the destination." },
+  { category: "Manage your eSIM", question: "Do I need to remove my physical SIM?", answer: "No. Keep your primary SIM for calls and texts, then set roamly as the mobile data line when you travel. Turn off data roaming on your primary SIM to avoid unexpected charges." },
+  { category: "Manage your eSIM", question: "Does roamly include calls and text messages?", answer: "The plans shown here are data-first plans. Calling and SMS availability depends on the specific plan, so check the plan details before choosing it for a phone number." },
+  { category: "Manage your eSIM", question: "Can I use hotspot or tethering?", answer: "Hotspot is available on plans marked “Hotspot supported”. Local network policies can affect performance, so use the coverage and feature notes as the source of truth." },
+  { category: "Manage your eSIM", question: "Can I top up my plan?", answer: "Top-up is available only where the plan details say it is supported. In the current mock experience, the top-up flow is represented by the plan feature and is ready for a fulfilment integration." },
+  { category: "Account & payment", question: "Can I keep my eSIM number after the plan expires?", answer: "A data-only eSIM does not automatically provide a permanent phone number. Number retention depends on the product type and provider policy; check the plan terms before relying on it for calls or SMS." },
+  { category: "Account & payment", question: "Can I receive verification codes on my eSIM number?", answer: "OTP delivery is not guaranteed. Some services block virtual or travel numbers, and data-only plans do not receive SMS. Keep access to your primary number for important verification." },
+  { category: "Troubleshooting", question: "What should I do if there is no connection?", answer: "Confirm the eSIM is enabled, select it for mobile data, turn data roaming on for the travel line, and restart your phone. If the issue continues, check local coverage and contact support." },
+  { category: "Troubleshooting", question: "What happens when I use all my data?", answer: "The connection may stop when the included data is used up, even if the validity period has not ended. Choose a larger plan or a top-up-enabled plan if you expect heavy usage." },
+  { category: "Troubleshooting", question: "Why is my network slower than expected?", answer: "Speed depends on local coverage, congestion, device capability and the partner network. 5G is available only where the plan and local network support it." },
+  { category: "Troubleshooting", question: "What happens after I submit a request?", answer: "The current form creates a mock request only and does not collect payment. In production, this step would connect to checkout, eSIM fulfilment and support." },
 ];
 
 export const formatVnd = (amount: number) => `${new Intl.NumberFormat("vi-VN").format(amount)}đ`;
