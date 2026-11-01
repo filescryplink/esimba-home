@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "path": "/", "title": "Roamly eSIM Store" },
+    { "path": "/admin", "title": "Roamly Admin" }
+  ]
+}
